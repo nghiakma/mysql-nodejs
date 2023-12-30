@@ -1,14 +1,11 @@
 import express from 'express'
-import dotenv from 'dotenv'
-import {router} from './routes/userRouter.js'
-dotenv.config()
 const app = express()
-
-
+import dotenv from 'dotenv'
+dotenv.config()
 app.use(express.json())
 
 
-app.use("/api",router)
+
 
 app.use((err,req,res,next)=>{
     console.error(err.stack)

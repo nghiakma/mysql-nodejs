@@ -8,7 +8,7 @@ const app = express()
 app.use(express.json())
 
 
-app.use("/api",router)
+app.use("/api",)
 
 app.use((err,req,res,next)=>{
     console.error(err.stack)
